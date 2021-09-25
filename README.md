@@ -1,7 +1,9 @@
 # Talos
 ## A webhook debouncer
 
-This project was created to limit the number webhook calls made to Gatsby JS from our Sanity content management system, so we could reduce the number of builds occuring but still have our site updated regularly.
+This project was created to limit the number webhook calls made to our Gatsby Cloud build webhooks from our Sanity content management system, so we could reduce the number of builds occuring but still have our site updated regularly. We noticed that due to a large number of editors rapidly making changes, and a number of automated sync tasks, that we were triggering a lot of unnecessary builds.
+
+NOTE: This project is only useful if the contents of the webhook payload aren't terribly important, as the Lambda will only send a single payload from SQS (FIFO).
 
 ## Get Started
 First install the AWS CDK and AWS SDK globally.
@@ -49,11 +51,9 @@ Once deployed, it will output API Gateway URL(s) which act as proxy links for yo
 ##### Diagram
 ![](https://i.imgur.com/DZJQvr0.jpeg)
 
-## Useful commands
+## Commands
 
  * `yarn build`   compile typescript to js
  * `yarn watch`   watch for changes and compile
  * `yarn test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+ * `yarn deploy`  build and deploy your stack
