@@ -1,0 +1,9 @@
+{
+  "cron": {
+    "schedule": "cron(0/15 * * * ? *)"
+  },
+  "webhookUrls": {
+    "production": "https://webhook.url/webhook/cdb45bf4-99b0-46bc-bdbc-20579c03822b",
+    "staging": "https://webhook.url/webhook/4d6b1f8f-f738-458e-83d1-1c2d586dfafa"
+  }
+}
