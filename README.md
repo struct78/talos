@@ -22,9 +22,9 @@ If you haven't used CDK before, you will need to bootstrap CDK.
 
 `cdk bootstrap aws://{ACCOUNT-NUMBER}/{REGION}` or `cdk bootstrap --profile default`
 
-Now install the dependencies.
+Now install the dependencies for CDK and the associated Lambda.
 
-`yarn install`
+`yarn install && cd lambda && yarn install`
 
 #### Configuration
 Create a file called `config.json` based on `config.example.json`. Set the cron schedule, and webhook URLs.
