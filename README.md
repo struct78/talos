@@ -5,12 +5,14 @@ This project was created to limit the number webhook calls made to our Gatsby Cl
 
 NOTE: This project is only useful if the contents of the webhook payload aren't terribly important, as the Lambda will only send a single payload from SQS (FIFO).
 
+## Prerequisites
+You will need to have the [AWS CLI](https://aws.amazon.com/cli/) installed.
 ## Get Started
-First install the AWS CDK and AWS SDK globally.
+First install the AWS CDK globally.
 
-`yarn global add aws-sdk aws-cdk` 
+`yarn global add aws-cdk` 
 or 
-`npm i -g aws-sdk aws-cdk`
+`npm i -g aws-cdk`
 
 Then configure your environment.
 
